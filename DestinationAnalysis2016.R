@@ -20,7 +20,7 @@ jobCorpus<-Corpus(VectorSource(as.character(d1$Job.title)))
 jobCorpus <- tm_map(jobCorpus, tolower)
 
 jobCorpus <- tm_map(jobCorpus, removeWords, stopwords("english"))
-jobCorpus <- tm_map(jobCorpus, removeWords, c('assistant','intern','trainee','staff','bar','technician,'))
+jobCorpus <- tm_map(jobCorpus, removeWords, c('assistant','intern','trainee','staff','bar','technician, ',''))
 
 jobCorpus <- tm_map(jobCorpus, PlainTextDocument)
 
